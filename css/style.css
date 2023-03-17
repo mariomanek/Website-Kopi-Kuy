@@ -99,13 +99,13 @@ nav .baris .right-nav button {
 }
 
 nav .baris .right-nav button:hover {
-   background-color: #ffca2c;
-   border-color: #ffc720;
+   background-color: #07eeff;
+   border-color: #07eeff;
 }
 
 nav .baris .right-nav button:active {
-   background-color: #ffcd39;
-   border-color: #ffc720;
+   background-color: #07eeff;
+   border-color: #07eeff;
 }
 
 /* Header */
