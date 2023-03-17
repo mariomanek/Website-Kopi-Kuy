@@ -1,12 +1,16 @@
+/* Dancing Script Font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+/* Poppins Font */
 @font-face {
    font-family: 'Poppins';
    src: url(../fonts/poppins.woff2);
 }
 
 * {
-   box-sizing: border-box;
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
 html {
@@ -14,92 +18,100 @@ html {
 }
 
 body {
-   font-family: 'Poppins';
+   font-family: 'Poppins', Arial;
+   font-size: 16px;
 }
 
-.bg-ijo {
-   background-color: rgb(6, 51, 22);
+.baris {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
 }
 
-img,
-video {
+h1 {
+   font-size: 2.5rem;
+}
+
+h2 {
+   font-size: 1.9rem;
+}
+
+p.sub {
+   width: 800px;
+   max-width: 100%;
+   text-align: center;
+   margin: auto;
+   margin-bottom: 40px;
+}
+
+img {
    max-width: 100%;
 }
 
 /* Navigasi */
 
 nav {
-   padding-top: 5px;
-   padding-right: 30px;
-   padding-bottom: 5px;
-   padding-left: 30px;
-   padding: 5px 30px 5px 30px;
+   background-color: #078364;
+   padding: 0 17px;
 }
 
 nav .baris {
+   height: 80px;
    display: flex;
    align-items: center;
-   height: 50px;
+   justify-content: space-between;
 }
 
-.logo {
-   height: 40px;
+nav .baris .left-nav .logo {
+   height: 60px;
 }
 
-nav button {
-   width: 100px;
-   height: 30px;
+nav .baris .right-nav {
+   display: flex;
+   align-items: center;
 }
 
-.navigasi {
+nav .baris .right-nav ul.navigasi {
    display: flex;
    list-style: none;
-   margin-right: 40px;
-   align-items: center;
-   margin-left: auto;
+   text-align: center;
 }
 
-.navigasi li {
-   width: 100px;
-}
-
-.navigasi li a {
-   color: #fff;
+nav .baris .right-nav ul.navigasi li a {
+   margin-right: 30px;
+   color: rgba(255, 255, 255, 0.55);
    text-decoration: none;
 }
 
-section {
-   padding-top: 80px;
-   padding-bottom: 80px;
-   margin-top: 80px;
-   margin-bottom: 80px;
+nav .baris .right-nav ul.navigasi li a:hover {
+   color: rgba(255, 255, 255, 0.75);
 }
 
-.baris {
-   display: flex;
-   align-items: center;
+nav .baris .right-nav button {
+   width: 76px;
+   height: 38px;
+   background-color: #ffc107;
+   border-radius: 8px;
+   outline: none;
+   border: none;
+   cursor: pointer;
 }
 
-h2 {
-   font-size: 30px;
-   text-align: center;
-   margin: 30px;
+nav .baris .right-nav button:hover {
+   background-color: #ffca2c;
+   border-color: #ffc720;
 }
 
-p.sub {
-   font-size: 18px;
-   width: 800px;
-   text-align: center;
-   margin: auto;
-   margin-bottom: 40px;
+nav .baris .right-nav button:active {
+   background-color: #ffcd39;
+   border-color: #ffc720;
 }
 
 /* Header */
 
 header {
-   padding-left: 50px;
-   padding-top: 80px;
-   padding-bottom: 80px;
+   padding: 70px;
 }
 
 header .baris {
@@ -107,29 +119,422 @@ header .baris {
    align-items: center;
 }
 
-header .kiri {
-   width: 50%;
-   padding-right: 100px;
-}
-
+header .kiri,
 header .kanan {
    width: 50%;
 }
 
 header .kiri h1 {
-   margin-bottom: 25px;
+   margin-bottom: 10px;
 }
 
 header .kiri p.tagline {
    margin-bottom: 20px;
-   font-size: 20px;
+   line-height: 1.5;
+   font-family: 'Dancing Script', Arial;
+   font-size: 30px;
 }
 
 header .kiri .cta p {
-   font-size: 16px;
-   margin-bottom: 20px;
+   margin-bottom: 5px;
+   font-weight: bold;
 }
 
 header .kiri .cta img {
-   height: 50px;
+   width: 50px;
+   margin-right: 10px;
+}
+
+/* Best Seller */
+
+section.best-seller {
+   background-color: rgb(232, 219, 190);
+   padding: 70px 50px;
+}
+
+section.best-seller h2 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+section.best-seller .produk img {
+   width: 100%;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+}
+
+section.best-seller .produk p {
+   font-weight: bold;
+   margin-top: 10px;
+   font-size: 1.3rem;
+   /* 1.3 * 16px */
+}
+
+/* About Us */
+
+section.about-us {
+   padding: 70px 50px;
+   text-align: center;
+}
+
+section.about-us h2 {
+   margin-bottom: 10px;
+}
+
+section.about-us p.tentang {
+   width: 1024px;
+   max-width: 90%;
+   margin: 10px auto 40px auto;
+}
+
+section.about-us img {
+   width: 960px;
+   max-width: 100%;
+   border-radius: 10px;
+}
+
+section.about-us .penjelasan {
+   max-width: 80%;
+   margin: 10px auto 30px auto;
+}
+
+/* Our Team */
+
+section.our-team {
+   padding: 70px 50px;
+   background-color: rgb(232, 219, 190);
+}
+
+section.our-team h2 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+section.our-team .baris .tim img {
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+}
+
+.our-team .baris h3 {
+   font-size: 1.3rem;
+   margin-bottom: 5px;
+}
+
+/* Review */
+
+section.review {
+   background-image: url(../images/shapes/9.svg);
+   background-size: cover;
+   padding: 70px 50px;
+}
+
+section.review h2 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+section.review .baris {
+   width: 1366px;
+   max-width: 100%;
+   margin: auto;
+   justify-content: space-evenly;
+   align-items: flex-start;
+}
+
+section.review .baris .testimoni {
+   width: 30%;
+   padding: 35px;
+   background-color: rgb(246, 244, 244);
+   border-radius: 5px;
+   border: 1px solid rgba(0, 0, 0, 0.175);
+   margin-bottom: 20px;
+}
+
+section.review .profile {
+   display: flex;
+   margin-bottom: 20px;
+   align-items: center;
+}
+
+section.review .profile img {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   margin-right: 20px;
+   border: 5px solid rgb(227, 211, 177);
+}
+
+/* Contact Us */
+
+section.contact-us {
+   background-color: rgb(232, 219, 190);
+   display: flex;
+   padding: 70px 50px;
+   align-items: center;
+}
+
+section.contact-us .map {
+   width: 60%;
+   margin-right: 50px;
+   box-sizing: border-box;
+}
+
+section.contact-us .contact .kolom {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+section.contact-us .contact .kolom img {
+   width: 60px;
+   margin-right: 20px;
+}
+
+section.contact-us .contact .kolom a {
+   text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+   background-color: #212529;
+   padding: 50px 0;
+}
+
+footer .baris {
+   display: block;
+   text-align: center;
+}
+
+footer ul.navigasi {
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: center;
+   list-style: none;
+}
+
+footer ul.navigasi li a {
+   text-decoration: none;
+   margin: 0 20px;
+   color: rgba(255, 255, 255, 0.55);
+}
+
+footer ul.navigasi li a:hover {
+   color: rgba(255, 255, 255, 0.75);
+}
+
+footer p {
+   color: #fff;
+}
+
+
+/* Utilitys */
+.card {
+   width: 20%;
+   margin: 10px 20px;
+   padding-bottom: 20px;
+   text-align: center;
+   background-color: aliceblue;
+   border-radius: 8px;
+   border-color: 1px rgba(0, 0, 0, .175);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, .150), 0 3px 6px rgba(0, 0, 0, 0.150);
+   transition: all .3s ease-in-out;
+}
+
+.card:hover {
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.23);
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
+
+/* Media screen  */
+
+/* table - 768px */
+@media (max-width: 768px) {
+
+   /* nav */
+   nav .baris {
+      justify-content: space-between;
+   }
+
+   nav .baris .right-nav ul.navigasi {
+      display: none;
+   }
+
+   /* header */
+   header .baris .kiri h1 {
+      font-size: 1.5rem;
+   }
+
+   header .baris .kiri h1>img {
+      width: 30px;
+   }
+
+   header .baris .kiri p {
+      font-size: 1.3rem;
+   }
+
+   header .baris .kiri .cta p {
+      font-size: .8rem;
+   }
+
+   header .baris .kiri .cta a>img {
+      width: 35px;
+   }
+
+   /* best seller */
+   section.best-seller .baris {
+      margin-top: -15px;
+   }
+
+   section.best-seller .baris .produk {
+      width: 25%;
+   }
+
+   section.best-seller .baris .produk p {
+      font-size: 1rem;
+   }
+
+   /* our team */
+   section.our-team .baris {
+      margin-top: -15px;
+   }
+
+   section.our-team .baris .tim {
+      width: 25%;
+   }
+
+   section.our-team .baris .tim h3 {
+      font-size: 1rem;
+   }
+
+   section.our-team .baris .tim p {
+      font-size: .8rem;
+   }
+
+   /* review */
+   section.review .baris {
+      margin-top: -15px;
+   }
+
+   section.review .baris .testimoni {
+      width: 40%;
+   }
+
+   section.review .baris .testimoni .profile img {
+      width: 60px;
+      height: 60px;
+   }
+
+   section.review .baris .testimoni .profile .titel h3 {
+      font-size: .9rem;
+   }
+
+   section.review .baris .testimoni p {
+      font-size: .8rem;
+   }
+
+   /* contact us */
+   section.contact-us .map {
+      width: 50%;
+   }
+
+   section.contact-us .contact .kolom img {
+      width: 40px;
+   }
+
+   /* footer */
+   footer {
+      padding: 30px 0;
+   }
+
+   footer .baris ul.navigasi li a {
+      font-size: .9rem;
+   }
+}
+
+/* Large Mobile  - 425px */
+@media (max-width: 425px) {
+
+   /* header */
+   header {
+      padding: 10px;
+      margin-bottom: 50px;
+   }
+
+   header .baris {
+      flex-direction: column;
+   }
+
+   header .baris img.kanan {
+      width: 100%;
+   }
+
+   header .baris .kiri {
+      width: 90%;
+      text-align: center;
+      order: 1;
+   }
+
+   header .baris .kiri h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+   }
+
+   header .baris .kiri p {
+      font-size: 1.7rem;
+   }
+
+   /* best seller */
+   section.best-seller .baris .produk {
+      width: 100%;
+   }
+
+   /* about us */
+   section.about-us p.tentang {
+      max-width: 100%;
+      margin-bottom: 25px;
+   }
+
+   section.about-us p.penjelasan {
+      max-width: 100%;
+      margin-top: 5px;
+   }
+
+   /* our team */
+   section.our-team .baris {
+      margin-top: -15px;
+   }
+
+   section.our-team .baris .tim {
+      width: 100%;
+   }
+
+   /* review */
+   section.review .baris .testimoni {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   /* contact us */
+   section.contact-us {
+      flex-direction: column;
+      align-items: baseline;
+   }
+
+   section.contact-us .map {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+
+   section.contact-us .contact .kolom img {
+      width: 30px;
+   }
+
+   /* footer */
+   footer .baris ul.navigasi li a {
+      font-size: .8rem;
+   }
+
 }
